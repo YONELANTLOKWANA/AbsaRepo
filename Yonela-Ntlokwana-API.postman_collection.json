@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "b0bc8514-9a40-4db4-a79a-d192c7ff6e75",
+		"name": "Yonela-Ntlokwana-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6743101",
+		"_collection_link": "https://yonela-crescent-956225.postman.co/workspace/Yonela-dev-Workspace~8b867803-6a21-40a2-8785-67ab9cee1699/collection/6743101-b0bc8514-9a40-4db4-a79a-d192c7ff6e75?action=share&source=collection_link&creator=6743101"
+	},
+	"item": [
+		{
+			"name": "RequestAllDogBreeds",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Verify- retriever is within list', () => {\r",
+							"    const responseJson = pm.response.json();\r",
+							"   pm.expect(responseJson.message.bulldog[0]).to.eql(\"boston\");\r",
+							"})\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dog.ceo/api/breeds/list/all",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breeds",
+						"list",
+						"all"
+					]
+				},
+				"description": "On this request call all dog breeds list."
+			},
+			"response": []
+		},
+		{
+			"name": "RequestAllSub-breeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dog.ceo/api/breed/hound/list",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breed",
+						"hound",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RequestRandomImage-subBreedGolden",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dog.ceo/api/breed/retriever/golden/images/random",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breed",
+						"retriever",
+						"golden",
+						"images",
+						"random"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
